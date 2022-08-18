@@ -1,0 +1,24 @@
+header {
+  display: none;
+}
+
+body{ 
+  background-image: url;
+}
+
+body h1 {
+  color: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 250px;
+}
+body h2 {
+  color: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 150px;
+}
