@@ -1,0 +1,19 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: "Poppins", sans-serif ;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+body * {
+  font-family: ;
+}

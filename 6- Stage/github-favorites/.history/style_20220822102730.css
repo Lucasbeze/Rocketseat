@@ -1,0 +1,21 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: "Poppins", sans-serif ;
+  --text-color : #303030 ; 
+}
+
+body {
+  font-size: 1.6rem;
+  color: ;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
