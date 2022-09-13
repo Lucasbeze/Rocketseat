@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color:#2F2F33 ;
+}
+#app{
+  padding: 2rem;
+  max-width: 112rem;
+  margin: 0 auto;
+}
+header{
+  margin-bottom: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.search{
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}
+.search input{
+  width: 34rem;
+  background-color: #06181C;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.search input::placeholder{
+  font-weight: bold;
+  color:#7C7C8A ;
+}
+.search input:focus{
+  border: none;
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+.search button{
+  width: 17rem;
+  height: 4.8rem;
+  background-color: #065E7C;
+  color: white;
+  height: 4.8rem;
+  border: none;
+  border-radius:5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search button:hover{
+  background-color: white;
+  color: #065E7C;
+  cursor: pointer;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  
+}
+table *{
+  font-size: 1.6rem;
+  color: white;
+}
+table th{
+  background: #092D38;
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+table th:first-child{
+  border-top-left-radius: .4rem;
+}
+table th:last-child{
+  border-top-right-radius: .4rem;
+}
+table tr:nth-child(even) {
+  background:#06161B;
+}
+table tr:nth-child(odd) {
+  background: #4A808C;
+}
+table td {
+  padding:1.5rem;
+  text-align: left;
+}
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius:50%;
+}
+td.user a {
+  text-decoration: none;
+}
+td.user a p {
+  font-weight: bold;
+}
+.remove {
+  border: none;
+  background-color: transparent;
+  color:#F75A68;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
