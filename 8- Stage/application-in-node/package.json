@@ -1,0 +1,19 @@
+{
+  "name": "application-in-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "author": "Lucas Bezerra da Silva",
+  "license": "ISC",
+  "description": "API desenvolvida no programa Explorer da Rocketseat",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
