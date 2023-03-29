@@ -54,8 +54,7 @@ export const Avatar = styled.div`
   > label {
     width: 48px;
     height: 48px;
-
-    background-color: ${({theme})=> theme.COLORS.PINK};
+    background-color: ${({ theme }) => theme.COLORS.PINK};
     border-radius: 50%;
 
     display: flex;
@@ -68,14 +67,14 @@ export const Avatar = styled.div`
 
     cursor: pointer;
 
-    input {
-      display: none;
-    }
+   input{
+    display: none ;
+   }
 
     svg {
       width: 20px;
       height: 20px;
-      color: ${({theme})=> theme.COLORS.BACKGROUND_900};
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
     }
   }
   
