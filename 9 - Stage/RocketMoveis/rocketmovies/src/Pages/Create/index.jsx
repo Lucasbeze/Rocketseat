@@ -17,7 +17,8 @@ import { Container, Content } from './styles';
 export function Create() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [nota, setNota] = useState("");
+  const [rating, setRating] = useState('')
+
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
@@ -35,18 +36,34 @@ export function Create() {
 
 
   async function handleNewNote() {
-    await api.post("/notes", {
+    if(!title){
+      return alert("Digite o título do Filme")
+    }
+
+    if(!rating) {
+      return alert("Digite um número para a nota")
+    }
+
+    if(newTag){
+      return alert("Você deixou uma tag no campo para adicionar, mas não cliclou em adicionar.Clique para adicionar ou deixe o campo vazio.");
+    }
+
+    await api.post("/movies", {
       title,
       description,
       tags,
-      nota: Number(nota)
+      rating: Number(rating)
     });
-    
-
     alert("Nota criada com sucesso!")
-    
   }
 
+  async function handleRemoveNote() {
+    const removeNote = confirm("Tem certeza que deseja descartar ?");
+
+    if (removeNote) {
+      navigate("/");
+    }
+  }
 
   return (
     <Container>
@@ -65,7 +82,7 @@ export function Create() {
             />
             <Input
               placeholder="Sua nota (de 0 a 5)"
-              onChange={e => setNota(e.target.value)}
+              onChange={e => setRating(e.target.value)}
             />
           </div>
           <Textarea
@@ -83,7 +100,6 @@ export function Create() {
                   onClick={() => handleRemoveTag(tag)}
                 />
               ))
-
             }
 
             <NoteItem
@@ -96,7 +112,11 @@ export function Create() {
           </div>
 
           <div className='dvs-tn'>
-            <Button className="btnExcluir" title="Excluir filme" />
+            <Button
+              className="btnExcluir"
+              title="Excluir filme"
+              onClick={handleRemoveNote}
+            />
             <Button
               title="Salvar alteração"
               onClick={handleNewNote}

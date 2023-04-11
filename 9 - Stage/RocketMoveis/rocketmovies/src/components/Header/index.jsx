@@ -3,19 +3,30 @@ import { useAuth } from "../../hooks/auth";
 
 import { api } from '../../services/api';
 
+import { useNavigate } from 'react-router-dom';
+
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 export function Header({ icon: Icon, ...rest }) {
   const { signOut, user } = useAuth();
 
+  const navigate = useNavigate();
+
   const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
- 
+
+  function handleSignOut() {
+    navigate("/");
+    signOut();
+  }
+
   return (
     <Container>
       <h1>RocketMovies</h1>
       <Text>
+
         {Icon && <Icon size={20} />}
-        <input {...rest} placeholder="Pesquisar pelo título" />
+        
+
       </Text>
       <Profile to="/profile">
         <img
@@ -24,7 +35,7 @@ export function Header({ icon: Icon, ...rest }) {
         />
         <div>
           <strong>{user.name}</strong>
-          <button onClick={signOut}>sair</button>
+          <button onClick={handleSignOut}>sair</button>
         </div>
 
       </Profile>

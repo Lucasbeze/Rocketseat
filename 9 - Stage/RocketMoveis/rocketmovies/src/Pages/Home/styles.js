@@ -51,7 +51,24 @@ export const Form = styled.form`
       font-size: 16px;
       text-align: center;
       padding: 12px;
+
     }
+    > input{
+    height: 56px;
+    width: 400px;
+
+    padding: 12px;
+
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    border: 0;
+    border-radius: 10px;
+
+    &:placeholder {
+      
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    }
+  }
   }
 
 `;

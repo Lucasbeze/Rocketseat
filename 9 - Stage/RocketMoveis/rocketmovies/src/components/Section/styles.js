@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.button`
   background-color: ${({theme})=> theme.COLORS.BACKGROUND_500};
   border-radius: 10px;
   padding: 32px;
