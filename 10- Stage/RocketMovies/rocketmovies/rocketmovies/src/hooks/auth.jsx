@@ -4,10 +4,14 @@ import { api } from "../service/api";
 
 
 
+
+
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
   const [data, setData] = useState({});
+
+  
 
   async function signIn({ email, password }) {
 
@@ -31,10 +35,12 @@ function AuthProvider({ children }) {
   }
 
   function signOut() {
+
     localStorage.removeItem("@rocketmovies:token");
     localStorage.removeItem("@rocketmovies:user");
 
     setData({});
+    
   }
 
   async function updateProfile({ user, avatarFile }) {
